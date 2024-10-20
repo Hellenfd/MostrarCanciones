@@ -27,5 +27,8 @@ public class ServicioCancion {
     public Cancion obtenerCancionPorId(Long id) {
         return this.repositorioCancion.findById(id).orElse(null);
     }
+    public Cancion actualizarCancion(Cancion cancion) {
+        return this.repositorioCancion.save(cancion);
+    }
 }
 
