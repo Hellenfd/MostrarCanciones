@@ -13,6 +13,9 @@ public class ServicioCancion {
     @Autowired
     private final RepositorioCancion repositorioCancion;
 
+    public Cancion agregarCancion(Cancion nuevaCancion) {
+        return this.repositorioCancion.save(nuevaCancion);
+    }
     public ServicioCancion(RepositorioCancion repositorioCancion) {
         this.repositorioCancion = repositorioCancion;
     }
